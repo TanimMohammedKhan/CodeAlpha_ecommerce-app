@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore | High-Performance Workspace Peripherals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="announcement-bar">
+        ⚡ Free express shipping on all curated workstation bundles. 30-day zero-risk desk trial.
+    </div>
+
+    <header class="navbar">
+        <div class="nav-brand" onclick="showSection('home-view')">
+            <div class="brand-icon-box">
+                <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <span class="brand-text">TechStore</span>
+            <span class="brand-badge">STUDIO</span>
+        </div>
+
+        <nav class="nav-center">
+            <span class="nav-link" onclick="showSection('home-view')">Home</span>
+            <span class="nav-link products-highlight" onclick="showSection('catalog-view')">
+                <i class="fa-solid fa-box-archive"></i> Products
+            </span>
+            <span class="nav-link" onclick="navigateToHomeSection('problem-section')">Engineering</span>
+            <span class="nav-link" onclick="navigateToHomeSection('case-section')">Case Study</span>
+            <span class="nav-link" onclick="navigateToHomeSection('faq-section')">FAQ</span>
+        </nav>
+
+        <div class="nav-actions">
+            <div id="auth-nav-slot">
+                <button class="btn-nav-plain" onclick="openAuthModal('login')">Sign In</button>
+                <button class="btn-register-nav" onclick="openAuthModal('register')">Register</button>
+            </div>
+            <button class="btn-cart-nav" onclick="toggleCartDrawer()">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-pill" id="cart-counter">0</span>
+            </button>
+        </div>
+    </header>
+
+    <div id="home-view">
+        <section class="hero">
+            <div class="hero-glow"></div>
+            <span class="eyebrow-tag">
+                <i class="fa-solid fa-microchip"></i> Workspace Architecture For Builders
+            </span>
+            <h1>Engineered for the <span>10-Hour Deep Work</span> Session.</h1>
+            <p class="hero-sub">
+                Stop piecing your workflow together through random plastic parts. TechStore engineers high-performance peripheral systems designed to eliminate physical fatigue, clear visual clutter, and keep you locked in focus.
+            </p>
+            <div class="hero-cta-group">
+                <button class="btn-hero-primary" onclick="showSection('catalog-view')">
+                    Explore Products Catalog <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <button class="btn-hero-secondary" onclick="navigateToHomeSection('problem-section')">
+                    System Architecture
+                </button>
+            </div>
+            <div class="hero-proof">
+                <span class="stars-box">★★★★★</span>
+                <span>Trusted by 14,000+ engineers, architects, and technical operators worldwide.</span>
+            </div>
+        </section>
+
+        <div class="proof-strip">
+            <p>Powering deep work for teams building the modern web</p>
+            <div class="logo-row">
+                <div class="logo-item">LINEAR</div>
+                <div class="logo-item">VERCEL</div>
+                <div class="logo-item">RAYCAST</div>
+                <div class="logo-item">GITHUB</div>
+                <div class="logo-item">STRIPE</div>
+            </div>
+        </div>
+
+        <section class="section-wrap" id="problem-section">
+            <span class="section-label">The Hidden Drain</span>
+            <h2 class="section-title">Your setup is draining your focus before lunch.</h2>
+            <p class="section-desc">
+                Cheap plastics rattle under your wrists. Poorly balanced display mounts wobble with every keypress. You spend thousands of hours building software, yet settle for consumer-grade peripherals that interrupt your flow state.
+            </p>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fa-solid fa-bolt-lightning"></i>
+                    </div>
+                    <h3>Micro-Frustrations</h3>
+                    <p>Latency spikes, inconsistent key actuation, and mushy membrane switches break your cognitive typing cadence throughout the day.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fa-solid fa-hand-dots"></i>
+                    </div>
+                    <h3>Physical Strain</h3>
+                    <p>Non-ergonomic wrist angles and misaligned display sightlines degrade posture and cause chronic tension during intense sprint deadlines.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3>Visual Clutter</h3>
+                    <p>Unstructured cable runs, loose dongles, and inconsistent hardware finishes create persistent cognitive drag across your field of view.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-wrap">
+            <div class="solution-box">
+                <div>
+                    <span class="section-label">Our Philosophy</span>
+                    <h2 class="section-title" style="margin-bottom: 1.25rem;">We treat desk setups like high-reliability software.</h2>
+                    <p style="color: var(--text-body); font-size: 1.05rem; line-height: 1.7;">
+                        Every component in our catalog undergoes rigorous evaluation for tactile consistency, thermal efficiency, and acoustic signature. We don't sell disposable plastic accessories; we configure durable workstations that stay invisible while you execute.
+                    </p>
+                </div>
+                <div class="solution-points">
+                    <div class="solution-item">
+                        <div class="solution-item-icon"><i class="fa-solid fa-keyboard"></i></div>
+                        <div>
+                            <h4>Tactile Feedback Tuned for Code</h4>
+                            <p>Factory-lubricated switches and dampening plates designed to lower actuation strain over 100,000 daily keystrokes.</p>
+                        </div>
+                    </div>
+                    <div class="solution-item">
+                        <div class="solution-item-icon"><i class="fa-solid fa-arrows-split-up-and-left"></i></div>
+                        <div>
+                            <h4>Zero-Clutter Architecture</h4>
+                            <p>Integrated power delivery and precision under-desk routing arrays that reduce cable clutter to a single drop.</p>
+                        </div>
+                    </div>
+                    <div class="solution-item">
+                        <div class="solution-item-icon"><i class="fa-solid fa-volume-xmark"></i></div>
+                        <div>
+                            <h4>Acoustic Dampening</h4>
+                            <p>Anodized aluminum chassis materials that absorb unwanted resonance and keep your audio crisp on pairing sessions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-wrap">
+            <span class="section-label">The Deployment Model</span>
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3>Configure Your Rig</h3>
+                    <p>Select your mechanical input, high-resolution audio, and display peripherals tailored to your specific engineering stack.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3>Precision Integration</h3>
+                    <p>Hardware arrives pre-flashed, calibrated, and paired with studio-grade cables. Zero driver bloatware or background services.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3>Lock Into Flow</h3>
+                    <p>Plug in, set your neutral posture, and experience frictionless execution in an acoustic-tuned workspace.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-wrap" id="case-section">
+            <div class="case-study">
+                <div>
+                    <span class="section-label">Verified Case Study</span>
+                    <div class="case-quote">
+                        "Replacing mismatched retail accessories with a unified TechStore setup gave me back an hour of uninterrupted focus every single day."
+                    </div>
+                    <div class="case-author">
+                        <div class="case-avatar">SL</div>
+                        <div>
+                            <h4 style="color: var(--text-heading);">Sarah Lin</h4>
+                            <span style="font-size: 0.85rem; color: var(--text-muted);">Staff Infrastructure Engineer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="metrics-column">
+                    <div class="metric-item">
+                        <strong>-40%</strong>
+                        <span>Reported wrist and finger fatigue across 10-hour workdays</span>
+                    </div>
+                    <div class="metric-item">
+                        <strong>0 Cables</strong>
+                        <span>Visible cable exposure on active mahogany and walnut desk tops</span>
+                    </div>
+                    <div class="metric-item">
+                        <strong>100%</strong>
+                        <span>Hardware compatibility across macOS and Arch Linux kernel</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-wrap">
+            <span class="section-label">Operator Feedback</span>
+            <h2 class="section-title">Built for technical standards.</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars-box" style="margin-bottom: 1rem;">★★★★★</div>
+                    <p class="testimonial-text">
+                        "The acoustic dampening on the aluminum board is unbelievable. No hollow pinging sounds during pair programming calls. Genuinely exceptional craftsmanship."
+                    </p>
+                    <div class="testimonial-user">
+                        <strong>David K.</strong>
+                        <span style="color: var(--text-muted); font-size: 0.85rem;">&bull; Principal Architect</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars-box" style="margin-bottom: 1rem;">★★★★★</div>
+                    <p class="testimonial-text">
+                        "The cleanest checkout and setup experience I have encountered. The hardware shipped in structured industrial packaging and worked immediately with my Mac."
+                    </p>
+                    <div class="testimonial-user">
+                        <strong>Elena R.</strong>
+                        <span style="color: var(--text-muted); font-size: 0.85rem;">&bull; Product Design Lead</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars-box" style="margin-bottom: 1rem;">★★★★★</div>
+                    <p class="testimonial-text">
+                        "The noise-cancelling headset is comfortable enough for all-day sprint retrospectives. Build quality feels like it will last a decade."
+                    </p>
+                    <div class="testimonial-user">
+                        <strong>Marcus T.</strong>
+                        <span style="color: var(--text-muted); font-size: 0.85rem;">&bull; Technical Founder</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-wrap" id="faq-section">
+            <span class="section-label">Addressing Technical Objections</span>
+            <h2 class="section-title" style="text-align: center;">Frequently Asked Questions</h2>
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>How does this differ from buying standard items on big-box marketplaces?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        We do not drop-ship random OEM parts. Every item in our catalog is specifically evaluated for low-latency firmware, acoustic resonance dampening, anodized metal chassis durability, and cross-platform compatibility.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Will this hardware work seamlessly on macOS, Windows, and Linux?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes. All input devices and audio gear feature physical hardware toggles for Command/Windows layouts and open-source QMK/VIA firmware support where applicable, eliminating proprietary bloatware.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What if the ergonomics or switch tactile feedback do not fit my style?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Every single purchase is covered by our 30-Day In-Studio Desk Trial. Put the gear through daily work sessions. If it is not your ideal setup, return it using our prepaid label for a complete 100% refund.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>How fast does dispatch and fulfillment take?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        All orders placed before 3:00 PM EST ship same-day via tracked priority delivery. You receive instant tracking updates directly in your account dashboard.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-wrap">
+            <div class="guarantee-box">
+                <div class="guarantee-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3>30-Day Zero-Risk Desk Trial</h3>
+                <p>
+                    Unbox the hardware. Integrate it into your actual daily sprints. If you don't experience a clear upgrade in comfort, focus, and typing accuracy, send it back for a full refund. Zero restocking fees.
+                </p>
+                <button class="btn-hero-primary" style="margin-top: 2rem;" onclick="showSection('catalog-view')">
+                    Browse All Products
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <div id="catalog-view" class="section-wrap hidden">
+        <div class="catalog-banner">
+            <div>
+                <span class="section-label">Dedicated Hardware Catalog</span>
+                <h2>Battle-tested hardware. Ready for deployment.</h2>
+                <p>Browse our verified workstation peripherals. Anyone can inspect specifications; sign in to dispatch and reserve inventory.</p>
+            </div>
+            <button class="btn-hero-secondary" onclick="showSection('home-view')">
+                <i class="fa-solid fa-arrow-left"></i> Back to Homepage
+            </button>
+        </div>
+
+        <div class="catalog-controls">
+            <div class="filter-pills">
+                <button class="pill-btn active" onclick="filterCatalog('all', this)">All Hardware</button>
+                <button class="pill-btn" onclick="filterCatalog('keyboards', this)">Keyboards</button>
+                <button class="pill-btn" onclick="filterCatalog('audio', this)">Audio & Sound</button>
+                <button class="pill-btn" onclick="filterCatalog('accessories', this)">Accessories</button>
+            </div>
+            <div class="search-field">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="catalog-search-input" placeholder="Search by name or specs..." oninput="handleCatalogSearch(event)">
+            </div>
+        </div>
+
+        <div class="product-grid" id="catalog-display"></div>
+    </div>
+
+    <div id="product-detail-view" class="section-wrap hidden">
+        <button class="btn-auth-nav" onclick="showSection('catalog-view')">
+            <i class="fa-solid fa-arrow-left"></i> Return to Products Catalog
+        </button>
+        <div id="product-detail-card" class="detail-view-container"></div>
+    </div>
+
+    <div id="profile-view" class="section-wrap hidden">
+        <button class="btn-auth-nav" onclick="showSection('catalog-view')">
+            <i class="fa-solid fa-arrow-left"></i> Return to Products
+        </button>
+        <div class="profile-container">
+            <div class="profile-card">
+                <div class="profile-avatar-circle">
+                    <i class="fa-solid fa-user-gear"></i>
+                </div>
+                <h3 id="profile-display-name">Developer</h3>
+                <p id="profile-display-email">developer@system.io</p>
+                <button class="btn-auth-nav" style="width: 100%; justify-content: center;" onclick="logoutUser()">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out
+                </button>
+            </div>
+            <div>
+                <h2 class="section-title" style="font-size: 1.8rem; margin-bottom: 1.5rem;">Deployment & Order History</h2>
+                <div id="order-history-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="nav-brand" style="margin-bottom: 1rem;">
+                    <div class="brand-icon-box">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <span class="brand-text">TechStore</span>
+                </div>
+                <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+                    Curating industrial-grade ergonomic hardware, acoustic-dampened mechanical interfaces, and high-fidelity peripherals for focused builders.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Hardware</h4>
+                <ul>
+                    <li><a href="javascript:void(0)" onclick="showSection('catalog-view')">Browse Products</a></li>
+                    <li><a href="javascript:void(0)" onclick="showSection('catalog-view')">Keyboards</a></li>
+                    <li><a href="javascript:void(0)" onclick="showSection('catalog-view')">Audio Systems</a></li>
+                    <li><a href="javascript:void(0)" onclick="showSection('catalog-view')">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Guarantees</h4>
+                <ul>
+                    <li><a href="javascript:void(0)" onclick="navigateToHomeSection('faq-section')">30-Day Desk Trial</a></li>
+                    <li><a href="javascript:void(0)" onclick="navigateToHomeSection('faq-section')">Direct Warranty</a></li>
+                    <li><a href="javascript:void(0)" onclick="navigateToHomeSection('faq-section')">Rapid Shipping</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Engineered For</h4>
+                <ul>
+                    <li><a href="#">Software Engineering</a></li>
+                    <li><a href="#">Audio Production</a></li>
+                    <li><a href="#">Systems Architecture</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 TechStore Studio Inc. All rights reserved.</span>
+            <span>Enterprise Workspace Hardware Division</span>
+        </div>
+    </footer>
+
+    <div id="auth-required-modal" class="modal-overlay hidden">
+        <div class="auth-card" style="text-align: center; max-width: 400px;">
+            <div style="width: 58px; height: 58px; border-radius: 50%; background: rgba(239, 68, 68, 0.12); color: #f87171; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin: 0 auto 1.25rem; border: 1px solid rgba(239, 68, 68, 0.3);">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <h3 style="color: var(--text-heading); font-size: 1.3rem; margin-bottom: 0.6rem;">Sign In Required</h3>
+            <p style="color: var(--text-body); font-size: 0.95rem; margin-bottom: 1.75rem; line-height: 1.6;">
+                You must sign in to buy products or add items to your hardware bag.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                <button class="btn-hero-primary" style="justify-content: center; width: 100%;" onclick="dismissAuthRequiredAndOpenLogin()">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i> Sign In to Continue
+                </button>
+                <button class="btn-hero-secondary" style="width: 100%; justify-content: center;" onclick="closeAuthRequiredModal()">
+                    Continue Browsing
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="auth-modal" class="modal-overlay hidden">
+        <div class="auth-card">
+            <button class="modal-close-btn" onclick="closeAuthModal()">&times;</button>
+            <div class="auth-tab-row">
+                <button id="tab-login" class="auth-tab-btn active" onclick="switchAuthMode('login')">Sign In</button>
+                <button id="tab-register" class="auth-tab-btn" onclick="switchAuthMode('register')">Register Account</button>
+            </div>
+
+            <form id="form-login" onsubmit="executeLogin(event)">
+                <div class="input-group">
+                    <label>Work Email</label>
+                    <input type="email" id="input-login-email" placeholder="name@domain.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="input-login-pass" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn-submit-auth">Sign In to Dashboard</button>
+            </form>
+
+            <form id="form-register" class="hidden" onsubmit="executeRegister(event)">
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" id="input-reg-name" placeholder="Alex Morgan" required>
+                </div>
+                <div class="input-group">
+                    <label>Work Email</label>
+                    <input type="email" id="input-reg-email" placeholder="name@domain.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Secure Password</label>
+                    <input type="password" id="input-reg-pass" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn-submit-auth">Create Workspace Account</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="cart-drawer" class="cart-drawer-container hidden">
+        <div class="drawer-backdrop" onclick="toggleCartDrawer()"></div>
+        <div class="drawer-panel">
+            <div class="drawer-header">
+                <h3>Hardware Bag</h3>
+                <button class="modal-close-btn" onclick="toggleCartDrawer()">&times;</button>
+            </div>
+            <div id="cart-item-list" class="drawer-body"></div>
+            <div class="drawer-footer">
+                <div class="drawer-subtotal">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal-val">$0.00</span>
+                </div>
+                <button class="btn-hero-primary" style="width: 100%; justify-content: center;" onclick="executeCheckout()">
+                    Complete Order Dispatch
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let allProducts = [];
+        let cartItems = JSON.parse(localStorage.getItem('tech_cart')) || [];
+        let authUser = JSON.parse(localStorage.getItem('tech_user')) || null;
+        let authToken = localStorage.getItem('tech_token') || null;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadCatalog();
+            syncAuthDisplay();
+            syncCartDisplay();
+        });
+
+        async function loadCatalog() {
+            try {
+                const res = await fetch('/api/products');
+                allProducts = await res.json();
+                renderCatalog(allProducts);
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+        function renderCatalog(items) {
+            const container = document.getElementById('catalog-display');
+            if (!container) return;
+            container.innerHTML = '';
+
+            if (items.length === 0) {
+                container.innerHTML = '<p style="color: var(--text-muted); grid-column: 1/-1;">No hardware items matched your parameters.</p>';
+                return;
+            }
+
+            items.forEach(prod => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <div class="product-image-container" onclick="openProductDetail(${prod.id})">
+                        <img src="${prod.image_url}" alt="${prod.name}">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-header-row">
+                            <h3 class="product-title" onclick="openProductDetail(${prod.id})">${prod.name}</h3>
+                            <span class="product-price">$${Number(prod.price).toFixed(2)}</span>
+                        </div>
+                        <p class="product-desc">${prod.description.substring(0, 85)}...</p>
+                        <div class="card-button-row">
+                            <button class="btn-card-add" onclick="handleBuyClick(${prod.id})">
+                                <i class="fa-solid fa-plus"></i> Add to Bag
+                            </button>
+                            <button class="btn-card-view" onclick="openProductDetail(${prod.id})">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function handleBuyClick(id) {
+            if (!authUser || !authToken) {
+                showAuthRequiredModal();
+                return;
+            }
+            addItemToCart(id);
+        }
+
+        function showAuthRequiredModal() {
+            document.getElementById('auth-required-modal').classList.remove('hidden');
+        }
+
+        function closeAuthRequiredModal() {
+            document.getElementById('auth-required-modal').classList.add('hidden');
+        }
+
+        function dismissAuthRequiredAndOpenLogin() {
+            closeAuthRequiredModal();
+            openAuthModal('login');
+        }
+
+        function filterCatalog(category, btnElement) {
+            document.querySelectorAll('.pill-btn').forEach(btn => btn.classList.remove('active'));
+            btnElement.classList.add('active');
+
+            if (category === 'all') {
+                renderCatalog(allProducts);
+                return;
+            }
+
+            const filtered = allProducts.filter(p => {
+                const text = (p.name + ' ' + p.description).toLowerCase();
+                if (category === 'keyboards') return text.includes('keyboard') || text.includes('mouse');
+                if (category === 'audio') return text.includes('headphone') || text.includes('sound') || text.includes('audio');
+                if (category === 'accessories') return text.includes('mouse') || text.includes('hub') || text.includes('cable') || text.includes('stand');
+                return true;
+            });
+
+            renderCatalog(filtered);
+        }
+
+        function handleCatalogSearch(e) {
+            const val = e.target.value.toLowerCase().trim();
+            const filtered = allProducts.filter(p => 
+                p.name.toLowerCase().includes(val) || 
+                p.description.toLowerCase().includes(val)
+            );
+            renderCatalog(filtered);
+        }
+
+        async function openProductDetail(id) {
+            try {
+                const res = await fetch(`/api/products/${id}`);
+                const prod = await res.json();
+
+                const container = document.getElementById('product-detail-card');
+                container.innerHTML = `
+                    <img src="${prod.image_url}" alt="${prod.name}">
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div>
+                            <span class="eyebrow-tag" style="margin-bottom: 0.75rem;">Verified Hardware Specification</span>
+                            <h1 style="color: var(--text-heading); font-size: 2.2rem; line-height: 1.2;">${prod.name}</h1>
+                            <div style="font-size: 1.8rem; font-weight: 800; color: #38bdf8; font-family: var(--font-mono); margin-top: 0.5rem;">$${Number(prod.price).toFixed(2)}</div>
+                        </div>
+                        <p style="color: var(--text-body); font-size: 1.05rem; line-height: 1.7;">${prod.description}</p>
+                        <div style="background: var(--bg-card); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); font-size: 0.9rem;">
+                            <div style="color: #34d399; font-weight: 700; margin-bottom: 0.25rem;">
+                                <i class="fa-solid fa-circle-check"></i> Factory Calibrated & Ready
+                            </div>
+                            <span style="color: var(--text-muted);">Current Active Inventory: ${prod.stock} units available in hub</span>
+                        </div>
+                        <button class="btn-hero-primary" style="justify-content: center;" onclick="handleBuyClick(${prod.id})">
+                            <i class="fa-solid fa-bag-shopping"></i> Add Hardware to Bag
+                        </button>
+                    </div>
+                `;
+
+                showSection('product-detail-view');
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+        function showSection(sectionId) {
+            document.getElementById('home-view').classList.add('hidden');
+            document.getElementById('catalog-view').classList.add('hidden');
+            document.getElementById('product-detail-view').classList.add('hidden');
+            document.getElementById('profile-view').classList.add('hidden');
+            document.getElementById(sectionId).classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function navigateToHomeSection(id) {
+            showSection('home-view');
+            setTimeout(() => {
+                const target = document.getElementById(id);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 50);
+        }
+
+        function toggleFaq(elem) {
+            const parent = elem.parentElement;
+            parent.classList.toggle('open');
+        }
+
+        function addItemToCart(id) {
+            const target = allProducts.find(p => p.id === id);
+            if (!target) return;
+
+            const existing = cartItems.find(i => i.id === id);
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                cartItems.push({
+                    id: target.id,
+                    name: target.name,
+                    price: Number(target.price),
+                    image_url: target.image_url,
+                    quantity: 1
+                });
+            }
+
+            persistCart();
+            syncCartDisplay();
+            toggleCartDrawer(true);
+        }
+
+        function modifyCartQuantity(id, delta) {
+            const item = cartItems.find(i => i.id === id);
+            if (!item) return;
+
+            item.quantity += delta;
+            if (item.quantity <= 0) {
+                cartItems = cartItems.filter(i => i.id !== id);
+            }
+
+            persistCart();
+            syncCartDisplay();
+        }
+
+        function persistCart() {
+            localStorage.setItem('tech_cart', JSON.stringify(cartItems));
+        }
+
+        function syncCartDisplay() {
+            const totalCount = cartItems.reduce((acc, i) => acc + i.quantity, 0);
+            const totalVal = cartItems.reduce((acc, i) => acc + (i.price * i.quantity), 0);
+
+            document.getElementById('cart-counter').innerText = totalCount;
+            document.getElementById('cart-subtotal-val').innerText = `$${totalVal.toFixed(2)}`;
+
+            const container = document.getElementById('cart-item-list');
+            container.innerHTML = '';
+
+            if (cartItems.length === 0) {
+                container.innerHTML = `
+                    <div style="text-align: center; margin: auto; color: var(--text-muted);">
+                        <i class="fa-solid fa-box-open" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.4;"></i>
+                        <p>Your hardware bag is empty.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            cartItems.forEach(item => {
+                const row = document.createElement('div');
+                row.className = 'cart-item-row';
+                row.innerHTML = `
+                    <div>
+                        <strong style="color: var(--text-heading); font-size: 0.95rem;">${item.name}</strong>
+                        <div style="color: var(--text-muted); font-size: 0.85rem; font-family: var(--font-mono); margin-top: 0.25rem;">
+                            $${item.price.toFixed(2)} &times; ${item.quantity}
+                        </div>
+                    </div>
+                    <div class="cart-stepper">
+                        <button onclick="modifyCartQuantity(${item.id}, -1)">-</button>
+                        <span>${item.quantity}</span>
+                        <button onclick="modifyCartQuantity(${item.id}, 1)">+</button>
+                    </div>
+                `;
+                container.appendChild(row);
+            });
+        }
+
+        function toggleCartDrawer(forceOpen = false) {
+            const drawer = document.getElementById('cart-drawer');
+            if (forceOpen) {
+                drawer.classList.remove('hidden');
+            } else {
+                drawer.classList.toggle('hidden');
+            }
+        }
+
+        function openAuthModal(defaultMode = 'login') {
+            switchAuthMode(defaultMode);
+            document.getElementById('auth-modal').classList.remove('hidden');
+        }
+
+        function closeAuthModal() {
+            document.getElementById('auth-modal').classList.add('hidden');
+        }
+
+        function switchAuthMode(mode) {
+            const tabLog = document.getElementById('tab-login');
+            const tabReg = document.getElementById('tab-register');
+            const formLog = document.getElementById('form-login');
+            const formReg = document.getElementById('form-register');
+
+            if (mode === 'login') {
+                tabLog.classList.add('active');
+                tabReg.classList.remove('active');
+                formLog.classList.remove('hidden');
+                formReg.classList.add('hidden');
+            } else {
+                tabReg.classList.add('active');
+                tabLog.classList.remove('active');
+                formReg.classList.remove('hidden');
+                formLog.classList.add('hidden');
+            }
+        }
+
+        async function executeRegister(e) {
+            e.preventDefault();
+            const name = document.getElementById('input-reg-name').value;
+            const email = document.getElementById('input-reg-email').value;
+            const password = document.getElementById('input-reg-pass').value;
+
+            try {
+                const res = await fetch('/api/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, password })
+                });
+                const data = await res.json();
+                if (!res.ok) throw new Error(data.error);
+
+                alert('Account registered successfully. Please sign in.');
+                switchAuthMode('login');
+            } catch (err) {
+                alert(err.message);
+            }
+        }
+
+        async function executeLogin(e) {
+            e.preventDefault();
+            const email = document.getElementById('input-login-email').value;
+            const password = document.getElementById('input-login-pass').value;
+
+            try {
+                const res = await fetch('/api/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password })
+                });
+                const data = await res.json();
+                if (!res.ok) throw new Error(data.error);
+
+                authToken = data.token;
+                authUser = data.user;
+
+                localStorage.setItem('tech_token', authToken);
+                localStorage.setItem('tech_user', JSON.stringify(authUser));
+
+                closeAuthModal();
+                syncAuthDisplay();
+            } catch (err) {
+                alert(err.message);
+            }
+        }
+
+        function logoutUser() {
+            authToken = null;
+            authUser = null;
+            localStorage.removeItem('tech_token');
+            localStorage.removeItem('tech_user');
+            syncAuthDisplay();
+            showSection('home-view');
+        }
+
+        function syncAuthDisplay() {
+            const slot = document.getElementById('auth-nav-slot');
+            if (authUser) {
+                slot.innerHTML = `
+                    <button class="btn-auth-nav" onclick="openUserProfile()">
+                        <i class="fa-solid fa-circle-user" style="color: #60a5fa;"></i>
+                        <span>${authUser.name}</span>
+                    </button>
+                    <button class="btn-nav-plain" onclick="logoutUser()">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </button>
+                `;
+            } else {
+                slot.innerHTML = `
+                    <button class="btn-nav-plain" onclick="openAuthModal('login')">Sign In</button>
+                    <button class="btn-register-nav" onclick="openAuthModal('register')">Register</button>
+                `;
+            }
+        }
+
+        async function openUserProfile() {
+            if (!authUser) return;
+
+            document.getElementById('profile-display-name').innerText = authUser.name;
+            document.getElementById('profile-display-email').innerText = authUser.email;
+
+            await renderOrderHistory();
+            showSection('profile-view');
+        }
+
+        async function renderOrderHistory() {
+            const container = document.getElementById('order-history-container');
+            container.innerHTML = '<p style="color: var(--text-muted);">Fetching your deployment records...</p>';
+
+            try {
+                const res = await fetch('/api/user/orders', {
+                    headers: { 'Authorization': `Bearer ${authToken}` }
+                });
+                const orders = await res.json();
+
+                if (!res.ok) throw new Error(orders.error);
+
+                if (orders.length === 0) {
+                    container.innerHTML = `
+                        <div style="background: var(--bg-surface); padding: 3rem; text-align: center; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                            <i class="fa-solid fa-receipt" style="font-size: 2.5rem; color: var(--text-muted); margin-bottom: 1rem; opacity: 0.5;"></i>
+                            <p style="color: var(--text-muted);">No deployment orders registered yet.</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                container.innerHTML = '';
+                orders.forEach(ord => {
+                    const dateFormatted = new Date(ord.created_at).toLocaleDateString(undefined, {
+                        year: 'numeric',
+                        month: 'short',
+                        day: 'numeric'
+                    });
+
+                    const block = document.createElement('div');
+                    block.className = 'order-block';
+                    block.innerHTML = `
+                        <div class="order-top">
+                            <div>
+                                <strong style="color: var(--text-heading);">Deployment #${ord.id}</strong> &bull; 
+                                <span style="color: var(--text-muted);">${dateFormatted}</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <span class="order-status-badge">${ord.order_status}</span>
+                                <strong style="color: #38bdf8; font-family: var(--font-mono); font-size: 1rem;">$${Number(ord.total_amount).toFixed(2)}</strong>
+                            </div>
+                        </div>
+                        <div class="order-items-wrapper">
+                            ${ord.items.map(i => `
+                                <div class="order-item-line">
+                                    <img src="${i.image_url}" alt="${i.name}">
+                                    <div>
+                                        <h4 style="color: var(--text-heading); font-size: 0.95rem;">${i.name}</h4>
+                                        <span style="color: var(--text-muted); font-size: 0.825rem; font-family: var(--font-mono);">
+                                            Qty: ${i.quantity} &bull; $${Number(i.price).toFixed(2)} unit
+                                        </span>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    `;
+                    container.appendChild(block);
+                });
+            } catch (err) {
+                container.innerHTML = `<p style="color: #ef4444;">Failed to fetch history: ${err.message}</p>`;
+            }
+        }
+
+        async function executeCheckout() {
+            if (!authToken) {
+                toggleCartDrawer();
+                showAuthRequiredModal();
+                return;
+            }
+
+            if (cartItems.length === 0) {
+                alert('Your hardware bag is empty.');
+                return;
+            }
+
+            const totalAmount = cartItems.reduce((acc, i) => acc + (i.price * i.quantity), 0);
+
+            try {
+                const res = await fetch('/api/orders', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${authToken}`
+                    },
+                    body: JSON.stringify({
+                        items: cartItems,
+                        totalAmount: totalAmount
+                    })
+                });
+
+                const data = await res.json();
+                if (!res.ok) throw new Error(data.error);
+
+                alert(`Order registered successfully! Order ID: #${data.orderId}`);
+                cartItems = [];
+                persistCart();
+                syncCartDisplay();
+                toggleCartDrawer();
+                openUserProfile();
+            } catch (err) {
+                alert(err.message);
+            }
+        }
+    </script>
+</body>
+</html>
